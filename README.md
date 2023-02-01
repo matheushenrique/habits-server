@@ -6,3 +6,4 @@ usefull commands
   npx prisma migrate dev (check all changes made in the schama and create a migration file)
   npx prisma studio (open prisma on browser)
   using vitejs.dev
+  npx prisma db seed (seed database)

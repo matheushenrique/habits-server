@@ -1,0 +1,14 @@
+import { FastifyInstance } from "fastify";
+import { prisma } from "./prisma";
+
+export async function appRoutes(app: FastifyInstance) {
+  app.get('/', async () => {
+    const habits = await prisma.habit.findMany({where: {
+      title: {
+        startsWith: 'test'
+      }
+    }})
+    return habits
+  })
+}
+
